@@ -17,8 +17,8 @@ import socket
 ON_PAAS = 'OPENSHIFT_REPO_DIR' in os.environ
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-WSGI_DIR = os.path.join(BASE_DIR, 'wsgi')
 REPO_DIR = os.environ.get('OPENSHIFT_REPO_DIR', BASE_DIR)
+WSGI_DIR = os.path.join(REPO_DIR, 'wsgi')
 DATA_DIR = os.environ.get('OPENSHIFT_DATA_DIR', BASE_DIR)
 
 # Quick-start development settings - unsuitable for production
