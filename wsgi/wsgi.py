@@ -4,7 +4,7 @@ WSGI config for myproject project.
 It exposes the WSGI callable as a module-level variable named ``application``.
 
 For more information on this file, see
-https://docs.djangoproject.com/en/1.9/howto/deployment/wsgi/
+https://docs.djangoproject.com/en/1.8/howto/deployment/wsgi/
 """
 
 import os
@@ -12,6 +12,5 @@ import os
 from django.core.wsgi import get_wsgi_application
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "myproject.settings")
-sys.path.append(os.path.join(os.environ['OPENSHIFT_REPO_DIR'], 'myproject'))
 
 application = get_wsgi_application()
